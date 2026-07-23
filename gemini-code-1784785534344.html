@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swabhiman Multipurpose Pvt. Ltd. | Design, Print & Branding</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #2563EB;
+            --light: #F8FAFC;
+            --text: #334155;
+            --card-bg: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { color: var(--text); background: var(--light); line-height: 1.6; }
+        
+        /* Header & Navigation */
+        header { background: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+        
+        /* Hero Section */
+        .hero { padding: 6rem 5% 5rem; text-align: center; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); color: #fff; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 650px; margin: 0 auto 2rem; }
+        .btn { background: var(--accent); color: #fff; padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .btn:hover { background: #1d4ed8; }
+
+        /* General Section Styling */
+        .section { padding: 4rem 5%; }
+        .title { text-align: center; margin-bottom: 0.5rem; font-size: 2rem; color: var(--primary); }
+        .subtitle { text-align: center; margin-bottom: 3rem; color: #64748B; font-size: 1rem; }
+        
+        /* Services Section */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid #E2E8F0; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--accent); margin-bottom: 0.8rem; }
+
+        /* Why Choose Us Section */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: center; }
+        .feature-box { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid #E2E8F0; }
+        .feature-box h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem; }
+
+        /* Image Gallery / Portfolio */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .gallery-item { position: relative; border-radius: 8px; overflow: hidden; background: #fff; border: 1px solid #E2E8F0; }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-caption { padding: 1rem; text-align: center; font-weight: 600; color: var(--primary); }
+
+        /* Contact Section */
+        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; background: var(--card-bg); padding: 2.5rem; border-radius: 8px; border: 1px solid #E2E8F0; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 0.95rem; }
+        .contact-form button { width: 100%; cursor: pointer; border: none; }
+
+        footer { background: var(--primary); color: #94A3B8; text-align: center; padding: 1.5rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Swabhiman <span>Multipurpose</span></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Creative Design, Precision Printing & Brand Strategy</h1>
+        <p>Swabhiman Multipurpose Pvt. Ltd. provides complete solutions as your trusted Graphic Designer, Commercial Printer, and Marketing Agency in Kathmandu, Nepal.</p>
+        <a href="#contact" class="btn">Request a Quote</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="title">About Swabhiman Multipurpose</h2>
+        <p class="subtitle">Elevating brands with quality, creativity, and commitment.</p>
+        <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+            Swabhiman Multipurpose Private Limited is a full-service agency dedicated to transforming how businesses communicate. From initial brand identity design to high-volume commercial printing and targeted marketing execution, we serve local and regional businesses with high-impact visual media.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section" style="background: #fff;">
+        <h2 class="title">Service Categories</h2>
+        <p class="subtitle">Tailored creative and promotional solutions under one roof.</p>
+        <div class="services-grid">
+            <div class="card">
+                <h3>🎨 Graphic Designer</h3>
+                <p>Logo design, complete brand guidelines, marketing flyers, brochure layouts, packaging design, and UI/UX solutions crafted specifically for your target audience.</p>
+            </div>
+            <div class="card">
+                <h3>🖨️ Commercial Printer</h3>
+                <p>High-definition offset and digital printing for business cards, banners, PVC boards, customized corporate merchandise, brochures, and promotional materials.</p>
+            </div>
+            <div class="card">
+                <h3>📢 Marketing Agency</h3>
+                <p>Digital marketing campaigns, social media strategy, search engine optimization (SEO), pay-per-click advertising, and comprehensive marketing roadmaps.</p>
+            </div>
+            <div class="card">
+                <h3>✨ Branding & Outdoor Media</h3>
+                <p>Complete business branding, outdoor flex banners, LED signboards, exhibition stalls, custom apparel, and corporate gift setup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="section">
+        <h2 class="title">Why Choose Us</h2>
+        <p class="subtitle">What sets Swabhiman Multipurpose apart from the rest.</p>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4>⚡ Fast Turnaround</h4>
+                <p>We meet tight deadlines without compromising on print quality or design aesthetics.</p>
+            </div>
+            <div class="feature-box">
+                <h4>🎯 Custom Tailored</h4>
+                <p>Every brand is unique—our designs and strategy align directly with your goals.</p>
+            </div>
+            <div class="feature-box">
+                <h4>💎 Premium Quality</h4>
+                <p>Using top-grade papers, vibrant inks, and modern digital printing technology.</p>
+            </div>
+            <div class="feature-box">
+                <h4>🤝 End-to-End Support</h4>
+                <p>From conceptualizing artwork to printing and digital promotion, we manage it all.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Image Gallery -->
+    <section id="portfolio" class="section" style="background: #fff;">
+        <h2 class="title">Our Work Gallery</h2>
+        <p class="subtitle">A glimpse into our creative design, printing, and branding work.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Graphic Design Project">
+                <div class="gallery-caption">Graphic & Visual Design</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Commercial Printing Press">
+                <div class="gallery-caption">Commercial Printing</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing & Branding Strategy">
+                <div class="gallery-caption">Marketing & Brand Strategy</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="section">
+        <h2 class="title">Contact & Location</h2>
+        <p class="subtitle">Get in touch with us today for a consultation or quote.</p>
+        <div class="contact-container">
+            <div>
+                <h3>Business Details</h3>
+                <p style="margin-top: 1rem;"><strong>Company:</strong> Swabhiman Multipurpose Pvt. Ltd.</p>
+                <p><strong>Categories:</strong> Graphic Designer, Commercial Printer, Marketing Agency</p>
+                <p><strong>Street Address:</strong> Kathmandu, Nepal</p>
+                <p><strong>Phone:</strong> +977-9800000000</p>
+                <p><strong>Email:</strong> info@swabhiman.com.np</p>
+                <p><strong>Website:</strong> www.swabhiman.com.np</p>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Google Maps Location</h3>
+                <iframe 
+                    src="https://maps.google.com/maps?q=Kathmandu,Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" height="180" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <div>
+                <h3>Send Us a Message</h3>
+                <form class="contact-form" style="margin-top: 1rem;" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="tel" placeholder="Phone Number">
+                    <textarea rows="4" placeholder="Tell us about your project requirements..." required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Swabhiman Multipurpose Private Limited. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
