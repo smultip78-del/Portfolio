@@ -3,190 +3,787 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swabhiman Multipurpose Pvt. Ltd. | Design, Print & Branding</title>
+    <title>Swabhiman Multipurpose Pvt. Ltd. | Graphic Design, Commercial Printing & Marketing</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
-            --primary: #0F172A;
-            --accent: #2563EB;
-            --light: #F8FAFC;
-            --text: #334155;
-            --card-bg: #FFFFFF;
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --accent: #2563eb;
+            --accent-light: #60a5fa;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { color: var(--text); background: var(--light); line-height: 1.6; }
-        
-        /* Header & Navigation */
-        header { background: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
-        .logo span { color: var(--accent); }
-        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--accent); }
-        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-nav:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         /* Hero Section */
-        .hero { padding: 6rem 5% 5rem; text-align: center; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); color: #fff; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 650px; margin: 0 auto 2rem; }
-        .btn { background: var(--accent); color: #fff; padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
-        .btn:hover { background: #1d4ed8; }
+        .hero {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
 
-        /* General Section Styling */
-        .section { padding: 4rem 5%; }
-        .title { text-align: center; margin-bottom: 0.5rem; font-size: 2rem; color: var(--primary); }
-        .subtitle { text-align: center; margin-bottom: 3rem; color: #64748B; font-size: 1rem; }
-        
-        /* Services Section */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .card { background: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid #E2E8F0; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--accent); margin-bottom: 0.8rem; }
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
 
-        /* Why Choose Us Section */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: center; }
-        .feature-box { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid #E2E8F0; }
-        .feature-box h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--accent-light);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
 
-        /* Image Gallery / Portfolio */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .gallery-item { position: relative; border-radius: 8px; overflow: hidden; background: #fff; border: 1px solid #E2E8F0; }
-        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.3s; }
-        .gallery-item:hover img { transform: scale(1.05); }
-        .gallery-caption { padding: 1rem; text-align: center; font-weight: 600; color: var(--primary); }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+        }
 
-        /* Contact Section */
-        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; background: var(--card-bg); padding: 2.5rem; border-radius: 8px; border: 1px solid #E2E8F0; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 0.95rem; }
-        .contact-form button { width: 100%; cursor: pointer; border: none; }
+        .hero h1 span {
+            background: linear-gradient(90deg, #60a5fa, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        footer { background: var(--primary); color: #94A3B8; text-align: center; padding: 1.5rem; margin-top: 3rem; }
+        .hero p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2.5rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-light);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Dynamic Portfolio Gallery */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--white);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+            color: var(--white);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery-overlay span {
+            font-size: 0.85rem;
+            color: var(--accent-light);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Contact & Map Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 4px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1.5rem;
+                display: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            nav.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navbar -->
     <header>
-        <div class="logo">Swabhiman <span>Multipurpose Pvt.Ltd.</span></div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#why-us">Why Us</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-layer-group text-primary"></i>
+                Swabhiman <span>Multipurpose</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav id="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact" class="btn-nav">Request Quote</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Creative Design, Precision Printing & Brand Strategy</h1>
-        <p>Swabhiman Multipurpose Pvt. Ltd. provides complete solutions as your trusted Graphic Designer, Commercial Printer, and Marketing Agency in Kathmandu, Nepal.</p>
-        <a href="#contact" class="btn">Request a Quote</a>
+        <div class="hero-content">
+            <span class="badge">Kathmandu, Nepal</span>
+            <h1>Creative Design, High-Precision Printing & <span>Brand Strategy</span></h1>
+            <p>Your all-in-one partner for Graphic Design, Commercial Offset/Digital Printing, Outdoor Media, and Digital Marketing execution.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> View Work</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Dynamic Stats Bar -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Creative Experts</div>
+            </div>
+        </div>
+    </div>
+
     <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="title">About Swabhiman Multipurpose</h2>
-        <p class="subtitle">Elevating brands with quality, creativity, and commitment.</p>
-        <p style="max-width: 800px; margin: 0 auto; text-align: center;">
-            Swabhiman Multipurpose Private Limited is a full-service agency dedicated to transforming how businesses communicate. From initial brand identity design to high-volume commercial printing and targeted marketing execution, we serve local and regional businesses with high-impact visual media.
-        </p>
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1542744094-3a3172720177?auto=format&fit=crop&w=800&q=80" alt="Swabhiman Team Working">
+            </div>
+            <div class="about-text">
+                <h3>Elevating Brands with Quality, Creativity & Commitment</h3>
+                <p>Swabhiman Multipurpose Private Limited is a full-service agency dedicated to transforming how businesses communicate. Operating from Anamnagar, Kathmandu, we bring visual clarity and high-impact identity to businesses across Nepal.</p>
+                <p>From initial brand identity design to high-volume commercial printing and targeted digital marketing execution, we provide seamless end-to-end solutions under one roof.</p>
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section" style="background: #fff;">
-        <h2 class="title">Service Categories</h2>
-        <p class="subtitle">Tailored creative and promotional solutions under one roof.</p>
+    <section id="services">
+        <div class="section-header">
+            <h2>Service Categories</h2>
+            <p>Comprehensive creative, printing, and promotional solutions.</p>
+        </div>
         <div class="services-grid">
-            <div class="card">
-                <h3>🎨 Graphic Designer</h3>
-                <p>Logo design, complete brand guidelines, marketing flyers, brochure layouts, packaging design, and UI/UX solutions crafted specifically for your target audience.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3>Graphic Design</h3>
+                <p>Logo design, complete brand guidelines, marketing flyers, brochure layouts, packaging design, and modern UI/UX solutions.</p>
             </div>
-            <div class="card">
-                <h3>🖨️ Commercial Printer</h3>
-                <p>High-definition offset and digital printing for business cards, banners, PVC boards, customized corporate merchandise, brochures, and promotional materials.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-print"></i></div>
+                <h3>Commercial Printing</h3>
+                <p>High-definition offset and digital printing for business cards, banners, PVC boards, custom merchandise, and corporate catalogs.</p>
             </div>
-            <div class="card">
-                <h3>📢 Marketing Agency</h3>
-                <p>Digital marketing campaigns, social media strategy, search engine optimization (SEO), pay-per-click advertising, and comprehensive marketing roadmaps.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                <h3>Marketing & SEO</h3>
+                <p>Digital marketing campaigns, social media strategy, SEO management, PPC advertising, and brand roadmaps.</p>
             </div>
-            <div class="card">
-                <h3>✨ Branding & Outdoor Media</h3>
-                <p>Complete business branding, outdoor flex banners, LED signboards, exhibition stalls, custom apparel, and corporate gift setup.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-us" class="section">
-        <h2 class="title">Why Choose Us</h2>
-        <p class="subtitle">What sets Swabhiman Multipurpose apart from the rest.</p>
-        <div class="features-grid">
-            <div class="feature-box">
-                <h4>⚡ Fast Turnaround</h4>
-                <p>We meet tight deadlines without compromising on print quality or design aesthetics.</p>
-            </div>
-            <div class="feature-box">
-                <h4>🎯 Custom Tailored</h4>
-                <p>Every brand is unique—our designs and strategy align directly with your goals.</p>
-            </div>
-            <div class="feature-box">
-                <h4>💎 Premium Quality</h4>
-                <p>Using top-grade papers, vibrant inks, and modern digital printing technology.</p>
-            </div>
-            <div class="feature-box">
-                <h4>🤝 End-to-End Support</h4>
-                <p>From conceptualizing artwork to printing and digital promotion, we manage it all.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+                <h3>Branding & Outdoor Media</h3>
+                <p>Full business venue branding, flex banners, LED signboards, exhibition stalls, custom corporate gifts, and apparel.</p>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio / Image Gallery -->
-    <section id="portfolio" class="section" style="background: #fff;">
-        <h2 class="title">Our Work Gallery</h2>
-        <p class="subtitle">A glimpse into our creative design, printing, and branding work.</p>
+    <!-- Why Us Section -->
+    <section id="why-us" style="background: var(--light-gray); border-radius: 30px;">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <p>What sets Swabhiman Multipurpose apart from the rest.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Fast Turnaround</h3>
+                <p>Meeting tight deadlines without compromising on print clarity, vibrant colors, or aesthetic quality.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <h3>Custom Tailored</h3>
+                <p>Every brand is unique—our designs and marketing strategies directly align with your business goals.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
+                <h3>Premium Quality</h3>
+                <p>Top-grade paper stock, vibrant non-fade inks, and cutting-edge digital printing technologies.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>End-to-End Support</h3>
+                <p>From initial artwork conceptualization to physical printing and digital promotion, we manage it all.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-header">
+            <h2>Our Work Gallery</h2>
+            <p>Explore our latest graphic design, commercial printing, packaging, and branding projects.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="design">Graphic Design</button>
+            <button class="filter-btn" data-filter="print">Printing</button>
+            <button class="filter-btn" data-filter="branding">Branding & Outdoor</button>
+            <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+        </div>
+
+        <!-- Gallery Grid -->
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Graphic Design Project">
-                <div class="gallery-caption">Graphic & Visual Design</div>
+            <div class="gallery-item" data-category="design">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Visual Brand Identity">
+                <div class="gallery-overlay">
+                    <h4>Brand Guidelines & Visual Design</h4>
+                    <span>Graphic Design</span>
+                </div>
             </div>
-            <div class="gallery-item">
+
+            <div class="gallery-item" data-category="print">
                 <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Commercial Printing Press">
-                <div class="gallery-caption">Commercial Printing</div>
+                <div class="gallery-overlay">
+                    <h4>Commercial Offset Printing</h4>
+                    <span>Printing</span>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing & Branding Strategy">
-                <div class="gallery-caption">Marketing & Brand Strategy</div>
+
+            <div class="gallery-item" data-category="branding">
+                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Outdoor Signage & Merchandise">
+                <div class="gallery-overlay">
+                    <h4>LED Signage & Merchandise</h4>
+                    <span>Branding & Outdoor</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="design">
+                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Packaging & Product Box Design">
+                <div class="gallery-overlay">
+                    <h4>Custom Product Packaging</h4>
+                    <span>Graphic Design</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="marketing">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing Strategy">
+                <div class="gallery-overlay">
+                    <h4>Digital Marketing & Analytics</h4>
+                    <span>Marketing</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="print">
+                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80" alt="Corporate Stationery">
+                <div class="gallery-overlay">
+                    <h4>Corporate Flyers & Business Cards</h4>
+                    <span>Printing</span>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Dynamic Overlay -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Portfolio Preview">
+    </div>
 
     <!-- Contact & Location Section -->
-    <section id="contact" class="section">
-        <h2 class="title">Contact & Location</h2>
-        <p class="subtitle">Get in touch with us today for a consultation or quote.</p>
-        <div class="contact-container">
-            <div>
-                <h3>Business Details</h3>
-                <p style="margin-top: 1rem;"><strong>Company:</strong> Swabhiman Multipurpose Pvt. Ltd.</p>
-                <p><strong>Categories:</strong> Graphic Designing, Printing, Branding, Marketing Agency</p>
-                <p><strong>Street Address:</strong> Anamnagar-32, Kathmandu, Nepal</p>
-                <p><strong>Phone:</strong> +977-9856080055, +977-9806590061</p>
-                <p><strong>Email:</strong> smultip78@gmail.com</p>
-                
-
-                <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Google Maps Location</h3>
-                <iframe 
-                    src="https://maps.google.com/maps?q=Kathmandu,Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" height="180" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy">
-                </iframe>
+    <section id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Reach out today for inquiries, custom quotes, or creative consultations.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong><br>
+                        Anamnagar-32, Kathmandu, Nepal
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        +977-9856080055, +977-9806590061
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong><br>
+                        smultip78@gmail.com
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <strong>Working Hours:</strong><br>
+                        Sun - Fri: 10:00 AM - 6:00 PM
+                    </div>
+                </div>
             </div>
 
-            <div>
+            <div class="contact-form">
                 <h3>Send Us a Message</h3>
-                <form class="contact-form" style="margin-top: 1rem;" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <input type="tel" placeholder="Phone Number">
-                    <textarea rows="4" placeholder="Tell us about your project requirements..." required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Tell us about your project requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -197,5 +794,66 @@
         <p>&copy; 2026 Swabhiman Multipurpose Private Limited. All rights reserved.</p>
     </footer>
 
+    <!-- Interactive JavaScript -->
+    <script>
+        // Dynamic Filter Gallery
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Feature
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        // Mobile Nav Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Form Submit Notice
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully. Swabhiman Multipurpose team will get back to you soon.');
+            e.target.reset();
+        });
+    </script>
 </body>
 </html>
