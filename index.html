@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swabhiman Multipurpose Pvt. Ltd. | Graphic Design, Commercial Printing & Marketing</title>
+    <title>Swabhiman Multipurpose Pvt. Ltd. | Commercial Offset Press & Marketing Agency</title>
     <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,526 +23,83 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
 
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header / Navbar */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-            transition: var(--transition);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--dark);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--primary);
-        }
-
-        .btn-nav {
-            background: var(--primary);
-            color: var(--white) !important;
-            padding: 0.6rem 1.4rem;
-            border-radius: 50px;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-nav:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+        /* Header */
+        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .logo span { color: var(--primary); }
+        nav { display: flex; align-items: center; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
+        nav a:hover { color: var(--primary); }
+        .btn-nav { background: var(--primary); color: var(--white) !important; padding: 0.6rem 1.4rem; border-radius: 50px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3); }
 
         /* Hero Section */
-        .hero {
-            padding: 9rem 2rem 5rem;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: var(--white);
-            text-align: center;
-            position: relative;
-        }
+        .hero { padding: 9rem 2rem 5rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: var(--white); text-align: center; }
+        .hero-content { max-width: 850px; margin: 0 auto; }
+        .badge { background: rgba(37, 99, 235, 0.2); color: var(--accent-light); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 1.5rem; border: 1px solid rgba(96, 165, 250, 0.3); }
+        .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.2rem; }
+        .hero h1 span { background: linear-gradient(90deg, #60a5fa, #93c5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.15rem; color: #94a3b8; margin-bottom: 2.5rem; }
 
-        .hero-content {
-            max-width: 850px;
-            margin: 0 auto;
-        }
+        .btn { padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--accent); transform: translateY(-3px); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.1); color: var(--white); }
 
-        .badge {
-            background: rgba(37, 99, 235, 0.2);
-            color: var(--accent-light);
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(96, 165, 250, 0.3);
-        }
+        /* General Sections */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3.5rem; }
+        .section-header h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .section-header p { color: var(--gray); font-size: 1.05rem; }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(90deg, #60a5fa, #93c5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: #94a3b8;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.9rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: var(--white);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            backdrop-filter: blur(5px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-
-        /* Section Layouts */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            color: var(--gray);
-            font-size: 1.05rem;
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            border-radius: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            padding: 2.5rem;
-            margin-top: -3rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-weight: 600;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            object-fit: cover;
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-text p {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
+        /* Machinery & Production Grid (Added Detailing) */
+        .machinery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .machinery-card { background: var(--white); padding: 1.8rem; border-radius: 16px; border: 1px solid var(--light-gray); box-shadow: var(--shadow); }
+        .machinery-card h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
 
         /* Services Cards */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--white); padding: 2.2rem; border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--light-gray); }
+        .service-icon { width: 60px; height: 60px; background: rgba(37, 99, 235, 0.1); color: var(--primary); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
+        .tag { background: var(--light-gray); color: var(--dark); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
 
-        .service-card {
-            background: var(--white);
-            padding: 2.2rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--light-gray);
-        }
+        /* Workflow Steps (Added Detailing) */
+        .workflow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: center; }
+        .step-card { background: var(--white); padding: 2rem; border-radius: 16px; position: relative; box-shadow: var(--shadow); }
+        .step-num { width: 40px; height: 40px; background: var(--primary); color: var(--white); font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-light);
-        }
+        /* Portfolio */
+        .portfolio-filters { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+        .filter-btn { background: var(--white); border: 1px solid var(--light-gray); padding: 0.6rem 1.4rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+        .gallery-item { position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); background: var(--white); cursor: pointer; }
+        .gallery-item img { width: 100%; height: 260px; object-fit: cover; transition: var(--transition); display: block; }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; opacity: 0; transition: var(--transition); color: var(--white); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+        /* Contact & Map */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; background: var(--white); padding: 3rem; border-radius: 24px; box-shadow: var(--shadow); }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.9rem 1.2rem; border: 1px solid #cbd5e1; border-radius: 10px; margin-bottom: 1rem; outline: none; }
 
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .service-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        /* Dynamic Portfolio Gallery */
-        .portfolio-filters {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: var(--white);
-            border: 1px solid var(--light-gray);
-            padding: 0.6rem 1.4rem;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            background: var(--white);
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            transition: var(--transition);
-            display: block;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent 60%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.5rem;
-            opacity: 0;
-            transition: var(--transition);
-            color: var(--white);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay h4 {
-            font-size: 1.15rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .gallery-overlay span {
-            font-size: 0.85rem;
-            color: var(--accent-light);
-        }
-
-        /* Lightbox Modal */
-        .lightbox {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            padding: 2rem;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 10px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            color: var(--white);
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        /* Contact & Map Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: var(--shadow);
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item i {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-top: 4px;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.9rem 1.2rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 10px;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: #94a3b8;
-            text-align: center;
-            padding: 2.5rem 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .about-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                flex-direction: column;
-                padding: 1.5rem;
-                display: none;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
-            nav.active {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-        }
+        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 2.5rem 2rem; margin-top: 4rem; }
     </style>
 </head>
 <body>
 
-    <!-- Header Navbar -->
+    <!-- Header -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-layer-group text-primary"></i>
-                Swabhiman <span>Multipurpose</span>
-            </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <nav id="nav-links">
+            <a href="#" class="logo"><i class="fa-solid fa-print"></i> Swabhiman <span>Multipurpose</span></a>
+            <nav>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#why-us">Why Us</a>
+                <a href="#capabilities">Press Capabilities</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact" class="btn-nav">Request Quote</a>
             </nav>
@@ -552,307 +109,200 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">Kathmandu, Nepal</span>
-            <h1>Creative Design, High-Precision Printing & <span>Brand Strategy</span></h1>
-            <p>Your all-in-one partner for Graphic Design, Commercial Offset/Digital Printing, Outdoor Media, and Digital Marketing execution.</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> View Work</a>
-                <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+            <span class="badge"><i class="fa-solid fa-location-dot"></i> Anamnagar-32, Kathmandu</span>
+            <h1>High-Precision <span>Commercial Printing</span> & Creative Agency</h1>
+            <p>From high-volume offset printing and custom packaging boxes to brand identity design and targeted marketing solutions across Nepal.</p>
+            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-boxes-packing"></i> View Print Work</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-file-invoice"></i> Get Custom Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- Dynamic Stats Bar -->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Creative Experts</div>
-            </div>
+    <!-- Production Capabilities (Press Detailing Added) -->
+    <section id="capabilities">
+        <div class="section-header">
+            <h2>Press & Machinery Capabilities</h2>
+            <p>Combining modern technology with skilled craftsmanship for precise printing output.</p>
         </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-grid">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1542744094-3a3172720177?auto=format&fit=crop&w=800&q=80" alt="Swabhiman Team Working">
+        <div class="machinery-grid">
+            <div class="machinery-card">
+                <h4><i class="fa-solid fa-sliders"></i> High-Speed Offset Press</h4>
+                <p style="font-size:0.9rem; color:var(--gray);">Optimal for high-volume catalogs, books, annual reports, magazines, brochures, and commercial flyers with exact pantone matching.</p>
             </div>
-            <div class="about-text">
-                <h3>Elevating Brands with Quality, Creativity & Commitment</h3>
-                <p>Swabhiman Multipurpose Private Limited is a full-service agency dedicated to transforming how businesses communicate. Operating from Anamnagar, Kathmandu, we bring visual clarity and high-impact identity to businesses across Nepal.</p>
-                <p>From initial brand identity design to high-volume commercial printing and targeted digital marketing execution, we provide seamless end-to-end solutions under one roof.</p>
-                <a href="#services" class="btn btn-primary">Explore Services</a>
+            <div class="machinery-card">
+                <h4><i class="fa-solid fa-microchip"></i> High-Definition Digital Press</h4>
+                <p style="font-size:0.9rem; color:var(--gray);">Fast turnaround, low-volume variable data printing for corporate business cards, invitation cards, certificates, and vouchers.</p>
+            </div>
+            <div class="machinery-card">
+                <h4><i class="fa-solid fa-box-open"></i> Packaging & Die-Cutting</h4>
+                <p style="font-size:0.9rem; color:var(--gray);">Custom duplex board packaging boxes, foil stamping, embossing, UV coating, matte/gloss lamination, and structural box design.</p>
+            </div>
+            <div class="machinery-card">
+                <h4><i class="fa-solid fa-vector-square"></i> Outdoor Large Format</h4>
+                <p style="font-size:0.9rem; color:var(--gray);">High-durability solvent & eco-solvent printing for flex banners, vinyl prints, LED signboards, and exhibition display boards.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Detailed Services Section -->
     <section id="services">
         <div class="section-header">
-            <h2>Service Categories</h2>
-            <p>Comprehensive creative, printing, and promotional solutions.</p>
+            <h2>Comprehensive Press & Agency Services</h2>
+            <p>Complete print production and branding solutions tailored to your business needs.</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
-                <h3>Graphic Design</h3>
-                <p>Logo design, complete brand guidelines, marketing flyers, brochure layouts, packaging design, and modern UI/UX solutions.</p>
+                <div class="service-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h3>Commercial & Book Printing</h3>
+                <p>Specialized binding (perfect bind, hardbound, saddle stitch) for books, corporate journals, registers, and annual reports.</p>
+                <div class="tag-list">
+                    <span class="tag">Books & Journals</span>
+                    <span class="tag">Annual Reports</span>
+                    <span class="tag">Magazines</span>
+                </div>
             </div>
             <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-print"></i></div>
-                <h3>Commercial Printing</h3>
-                <p>High-definition offset and digital printing for business cards, banners, PVC boards, custom merchandise, and corporate catalogs.</p>
+                <div class="service-icon"><i class="fa-solid fa-box-tissue"></i></div>
+                <h3>Custom Packaging Boxes</h3>
+                <p>Industrial product packaging, food-grade boxes, cosmetic boxes, and gift packaging with custom die-cut finish.</p>
+                <div class="tag-list">
+                    <span class="tag">Duplex Boxes</span>
+                    <span class="tag">Rigid Boxes</span>
+                    <span class="tag">Product Sleeves</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
+                <h3>Corporate Stationery & Gift Items</h3>
+                <p>Premium business stationery, customized calendars, diaries, letterheads, envelopes, and customized merchandise.</p>
+                <div class="tag-list">
+                    <span class="tag">Calendars & Diaries</span>
+                    <span class="tag">Letterheads</span>
+                    <span class="tag">ID Cards</span>
+                </div>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                <h3>Marketing & SEO</h3>
-                <p>Digital marketing campaigns, social media strategy, SEO management, PPC advertising, and brand roadmaps.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-store"></i></div>
-                <h3>Branding & Outdoor Media</h3>
-                <p>Full business venue branding, flex banners, LED signboards, exhibition stalls, custom corporate gifts, and apparel.</p>
+                <h3>Digital Marketing & Design</h3>
+                <p>Graphic layout creation, vector graphics, social media ad management, SEO, and complete brand identity setups.</p>
+                <div class="tag-list">
+                    <span class="tag">Logo & Layouts</span>
+                    <span class="tag">Social Media Ads</span>
+                    <span class="tag">SEO</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="why-us" style="background: var(--light-gray); border-radius: 30px;">
+    <!-- Production Process Workflow -->
+    <section id="workflow" style="background: var(--light-gray); border-radius: 30px;">
         <div class="section-header">
-            <h2>Why Choose Us</h2>
-            <p>What sets Swabhiman Multipurpose apart from the rest.</p>
+            <h2>Our Seamless Production Workflow</h2>
+            <p>How we take your idea from digital artwork to physical high-quality print.</p>
         </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
-                <h3>Fast Turnaround</h3>
-                <p>Meeting tight deadlines without compromising on print clarity, vibrant colors, or aesthetic quality.</p>
+        <div class="workflow-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h4>Design & Pre-Press</h4>
+                <p style="font-size: 0.85rem; color: var(--gray);">Graphic design, color proofing, and CTP plate preparation.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
-                <h3>Custom Tailored</h3>
-                <p>Every brand is unique—our designs and marketing strategies directly align with your business goals.</p>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h4>Precision Printing</h4>
+                <p style="font-size: 0.85rem; color: var(--gray);">High-speed offset/digital execution with accurate ink calibration.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
-                <h3>Premium Quality</h3>
-                <p>Top-grade paper stock, vibrant non-fade inks, and cutting-edge digital printing technologies.</p>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h4>Post-Press & Finishing</h4>
+                <p style="font-size: 0.85rem; color: var(--gray);">Lamination, UV coating, die-cutting, folding, and binding.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
-                <h3>End-to-End Support</h3>
-                <p>From initial artwork conceptualization to physical printing and digital promotion, we manage it all.</p>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <h4>Quality Check & Delivery</h4>
+                <p style="font-size: 0.85rem; color: var(--gray);">Inspection of print output and prompt delivery to your doorstep.</p>
             </div>
         </div>
     </section>
 
-    <!-- Dynamic Portfolio Section -->
+    <!-- Portfolio Gallery -->
     <section id="portfolio">
         <div class="section-header">
-            <h2>Our Work Gallery</h2>
-            <p>Explore our latest graphic design, commercial printing, packaging, and branding projects.</p>
+            <h2>Featured Work Gallery</h2>
+            <p>Samples of offset print runs, product packaging, and corporate media.</p>
         </div>
-
-        <!-- Filter Buttons -->
         <div class="portfolio-filters">
             <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="design">Graphic Design</button>
-            <button class="filter-btn" data-filter="print">Printing</button>
+            <button class="filter-btn" data-filter="offset">Offset & Books</button>
+            <button class="filter-btn" data-filter="packaging">Packaging</button>
             <button class="filter-btn" data-filter="branding">Branding & Outdoor</button>
-            <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
         </div>
-
-        <!-- Gallery Grid -->
         <div class="gallery-grid">
-            <div class="gallery-item" data-category="design">
-                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Visual Brand Identity">
+            <div class="gallery-item" data-category="offset">
+                <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Commercial Offset Printing">
                 <div class="gallery-overlay">
-                    <h4>Brand Guidelines & Visual Design</h4>
-                    <span>Graphic Design</span>
+                    <h4>Offset Press Book & Catalog Printing</h4>
+                    <span>Offset & Books</span>
                 </div>
             </div>
-
-            <div class="gallery-item" data-category="print">
-                <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Commercial Printing Press">
+            <div class="gallery-item" data-category="packaging">
+                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Packaging Box Design">
                 <div class="gallery-overlay">
-                    <h4>Commercial Offset Printing</h4>
-                    <span>Printing</span>
+                    <h4>Custom Duplex Packaging Boxes</h4>
+                    <span>Packaging</span>
                 </div>
             </div>
-
             <div class="gallery-item" data-category="branding">
-                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Outdoor Signage & Merchandise">
+                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Outdoor Signage">
                 <div class="gallery-overlay">
-                    <h4>LED Signage & Merchandise</h4>
+                    <h4>LED Signboard & Outdoor Flex</h4>
                     <span>Branding & Outdoor</span>
                 </div>
             </div>
-
-            <div class="gallery-item" data-category="design">
-                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Packaging & Product Box Design">
-                <div class="gallery-overlay">
-                    <h4>Custom Product Packaging</h4>
-                    <span>Graphic Design</span>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="marketing">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing Strategy">
-                <div class="gallery-overlay">
-                    <h4>Digital Marketing & Analytics</h4>
-                    <span>Marketing</span>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="print">
-                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80" alt="Corporate Stationery">
-                <div class="gallery-overlay">
-                    <h4>Corporate Flyers & Business Cards</h4>
-                    <span>Printing</span>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Lightbox Dynamic Overlay -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Portfolio Preview">
-    </div>
-
-    <!-- Contact & Location Section -->
+    <!-- Contact & Direct Location Section -->
     <section id="contact">
-        <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p>Reach out today for inquiries, custom quotes, or creative consultations.</p>
-        </div>
         <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Contact Details</h3>
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <strong>Address:</strong><br>
-                        Anamnagar-32, Kathmandu, Nepal
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <strong>Phone:</strong><br>
-                        +977-9856080055, +977-9806590061
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <strong>Email:</strong><br>
-                        smultip78@gmail.com
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <div>
-                        <strong>Working Hours:</strong><br>
-                        Sun - Fri: 10:00 AM - 6:00 PM
-                    </div>
-                </div>
+            <div>
+                <h3>Contact Press Office</h3>
+                <p style="color: var(--gray); margin-bottom: 1.5rem;">Reach out for paper sample requests, press quotes, or volume discounts.</p>
+                <p><strong><i class="fa-solid fa-building"></i> Company:</strong> Swabhiman Multipurpose Pvt. Ltd.</p>
+                <p><strong><i class="fa-solid fa-map-pin"></i> Location:</strong> Anamnagar-32, Kathmandu, Nepal</p>
+                <p><strong><i class="fa-solid fa-phone"></i> Direct Call/WhatsApp:</strong> +977-9856080055, +977-9806590061</p>
+                <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> smultip78@gmail.com</p>
             </div>
-
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Your Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="4" placeholder="Tell us about your project requirements..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            <div>
+                <h3>Request Instant Quote</h3>
+                <form id="quoteForm">
+                    <div class="form-group"><input type="text" placeholder="Your Name or Business Name" required></div>
+                    <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+                    <div class="form-group"><input type="tel" placeholder="Phone / WhatsApp Number" required></div>
+                    <div class="form-group"><textarea rows="3" placeholder="Describe your job (e.g. quantity, paper GSM, box dimension, book pages)..." required></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Swabhiman Multipurpose Private Limited. All rights reserved.</p>
     </footer>
 
-    <!-- Interactive JavaScript -->
     <script>
-        // Dynamic Filter Gallery
+        // Filter Script
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
-
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-
                 const filter = btn.getAttribute('data-filter');
-
                 galleryItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
                 });
             });
-        });
-
-        // Lightbox Feature
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxClose = document.getElementById('lightbox-close');
-
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const imgSrc = item.querySelector('img').src;
-                lightboxImg.src = imgSrc;
-                lightbox.classList.add('active');
-            });
-        });
-
-        lightboxClose.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-        });
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-            }
-        });
-
-        // Mobile Nav Toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Form Submit Notice
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you! Your message has been sent successfully. Swabhiman Multipurpose team will get back to you soon.');
-            e.target.reset();
         });
     </script>
 </body>
