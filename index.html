@@ -63,6 +63,23 @@
         .section-header h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.8rem; letter-spacing: -0.5px; }
         .section-header p { color: var(--gray); font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
 
+        /* About Us Section Styles */
+        .about-card-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; background: var(--white); padding: 3.5rem; border-radius: 30px; border: 1px solid var(--light-gray); box-shadow: var(--shadow-lg); }
+        .about-text-content h3 { font-size: 2rem; font-weight: 800; margin-bottom: 1.2rem; line-height: 1.3; }
+        .about-text-content p { color: var(--gray); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7; }
+        
+        .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .highlight-item { display: flex; gap: 12px; align-items: flex-start; }
+        .highlight-item i { background: rgba(37, 99, 235, 0.1); color: var(--primary); padding: 12px; border-radius: 12px; font-size: 1.2rem; }
+        .highlight-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .highlight-item p { font-size: 0.85rem; color: var(--gray); margin: 0; }
+
+        .about-image-stack { position: relative; }
+        .about-image-stack img { width: 100%; height: 420px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-lg); }
+        .about-experience-badge { position: absolute; bottom: -20px; left: -20px; background: var(--primary); color: var(--white); padding: 1.5rem 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4); text-align: center; }
+        .about-experience-badge .num { font-size: 2.2rem; font-weight: 800; line-height: 1; }
+        .about-experience-badge .txt { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+
         /* Services Grid & Interactive Cards */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .service-card { background: var(--white); border-radius: 24px; padding: 2.2rem; border: 1px solid var(--light-gray); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
@@ -115,11 +132,11 @@
         .search-box input { width: 100%; padding: 0.65rem 1rem 0.65rem 2.5rem; border-radius: 50px; border: 1px solid var(--light-gray); outline: none; font-size: 0.9rem; }
         .search-box i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--gray); }
 
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
         .gallery-card { background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid var(--light-gray); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: var(--transition); cursor: pointer; }
         .gallery-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
         
-        .gallery-img-container { position: relative; height: 250px; overflow: hidden; }
+        .gallery-img-container { position: relative; height: 240px; overflow: hidden; }
         .gallery-img-container img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
         .gallery-card:hover .gallery-img-container img { transform: scale(1.08); }
 
@@ -153,7 +170,7 @@
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
 
         @media (max-width: 900px) {
-            .workflow-content-card, .modal-card, .contact-grid { grid-template-columns: 1fr; }
+            .workflow-content-card, .modal-card, .contact-grid, .about-card-container { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.3rem; }
             .workflow-nav::before { display: none; }
         }
@@ -161,7 +178,7 @@
 </head>
 <body>
 
-    <!-- Dynamic Header -->
+    <!-- Header Navbar -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -169,6 +186,7 @@
                 Swabhiman <span>Multipurpose</span>
             </a>
             <nav>
+                <a href="#about">About Us</a>
                 <a href="#services">Services</a>
                 <a href="#workflow">Workflow</a>
                 <a href="#portfolio">Featured Work</a>
@@ -177,7 +195,7 @@
         </div>
     </header>
 
-    <!-- Dynamic Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="badge"><i class="fa-solid fa-certificate"></i> Kathmandu's Premier Printing & Branding Agency</div>
@@ -185,12 +203,63 @@
             <p>From high-volume offset catalog press runs to bespoke luxury packaging, digital identity design, and targeted marketing strategy.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> Explore Portfolio</a>
-                <a href="#workflow" class="btn btn-secondary"><i class="fa-solid fa-gears"></i> Our Workflow</a>
+                <a href="#about" class="btn btn-secondary"><i class="fa-solid fa-circle-info"></i> About Our Company</a>
             </div>
         </div>
     </section>
 
-    <!-- Comprehensive Press & Agency Services -->
+    <!-- About / Information Section -->
+    <section id="about">
+        <div class="about-card-container">
+            <div class="about-text-content">
+                <span class="badge"><i class="fa-solid fa-building"></i> Company Information</span>
+                <h3>Transforming Corporate Visions Into Tangible Media</h3>
+                <p>Operating from <strong>Anamnagar-32, Kathmandu</strong>, Swabhiman Multipurpose Private Limited is a full-service creative press and agency. We specialize in high-precision commercial printing, custom product packaging, outdoor advertising media, and modern digital marketing.</p>
+                <p>Equipped with state-of-the-art CTP plates, offset machinery, and digital presses, we ensure every project delivers flawless ink consistency, crisp text, and vibrant color accuracy across all paper stocks.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <h4>Quality Assurance</h4>
+                            <p>Micron-level color proofing and ink calibration.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div>
+                            <h4>Rapid Turnaround</h4>
+                            <p>Fast offset and digital press execution.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-box-open"></i>
+                        <div>
+                            <h4>Custom Packaging</h4>
+                            <p>Structural die-cutting and box engineering.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div>
+                            <h4>Full Marketing</h4>
+                            <p>Digital strategy, brand guidelines, and SEO.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image-stack">
+                <img src="https://images.unsplash.com/photo-1542744094-3a3172720177?auto=format&fit=crop&w=800&q=80" alt="Swabhiman Press Operations">
+                <div class="about-experience-badge">
+                    <div class="num">100%</div>
+                    <div class="txt">Client Commitment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Services Section -->
     <section id="services">
         <div class="section-header">
             <h2>Comprehensive Press & Agency Services</h2>
@@ -216,7 +285,7 @@
                         <span>View Full Breakdown</span> <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="service-details" id="serv1">
-                        <p><strong>Technical Specs:</strong> Heidelberg 4-color printing presses, computerized color calibration, automatic folding, thread sewing, thermal gloss/matte lamination, and metallic foil stamping options.</p>
+                        <p><strong>Technical Specs:</strong> Multi-color printing presses, computerized color calibration, automatic folding, thread sewing, thermal gloss/matte lamination, and metallic foil stamping options.</p>
                     </div>
                 </div>
             </div>
@@ -292,7 +361,7 @@
         </div>
     </section>
 
-    <!-- Our Seamless Production Workflow (Dynamic Interactive Step Switcher) -->
+    <!-- Dynamic Production Workflow Interactive Section -->
     <section id="workflow">
         <div class="section-header">
             <h2>Our Seamless Production Workflow</h2>
@@ -341,11 +410,11 @@
         </div>
     </section>
 
-    <!-- Dynamic Featured Work Gallery with Search & Filters -->
+    <!-- Expanded Featured Work Gallery -->
     <section id="portfolio">
         <div class="section-header">
             <h2>Featured Work Gallery</h2>
-            <p>Filter or search through our latest production runs, brand collateral, and packaging designs.</p>
+            <p>Explore our recent press runs, product packaging, outdoor branding, and marketing collateral.</p>
         </div>
 
         <div class="gallery-controls">
@@ -354,6 +423,7 @@
                 <button class="filter-btn" onclick="filterGallery('print', this)">Commercial Press</button>
                 <button class="filter-btn" onclick="filterGallery('packaging', this)">Packaging</button>
                 <button class="filter-btn" onclick="filterGallery('branding', this)">Signage & Branding</button>
+                <button class="filter-btn" onclick="filterGallery('marketing', this)">Digital Marketing</button>
             </div>
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -362,8 +432,8 @@
         </div>
 
         <div class="gallery-grid" id="galleryGrid">
-            <!-- Project Item 1 -->
-            <div class="gallery-card" data-category="print" data-title="annual report corporate catalog" onclick="openModal('Annual Corporate Journal', 'Commercial Printing', '300 GSM Art Card Cover, 120 GSM Matt Inner Pages', 'Perfect Lock Binding with Spot UV Logo', 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=800&q=80')">
+            <!-- Item 1 -->
+            <div class="gallery-card" data-category="print" data-title="annual report corporate catalog journal" onclick="openModal('Annual Corporate Journal', 'Commercial Press', '300 GSM Art Card Cover, 120 GSM Matt Inner Pages', 'Perfect Lock Binding with Spot UV Logo', 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
                     <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Catalog Print">
                     <span class="gallery-badge">Commercial Press</span>
@@ -373,13 +443,13 @@
                     <p>High-volume catalog press run with thermal matte lamination and gold foil accents.</p>
                     <div class="gallery-meta">
                         <span><i class="fa-solid fa-file-lines"></i> 5,000 Copies</span>
-                        <span>View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Item 2 -->
-            <div class="gallery-card" data-category="packaging" data-title="custom duplex product box cosmetic" onclick="openModal('Luxury Cosmetic Packaging Box', 'Packaging Design', '350 GSM Swedish Duplex Board', 'Embossed Logo with Custom Die-Cut Inner Tray', 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80')">
+            <!-- Item 2 -->
+            <div class="gallery-card" data-category="packaging" data-title="custom duplex product packaging box cosmetic" onclick="openModal('Luxury Cosmetic Packaging Box', 'Packaging', '350 GSM Swedish Duplex Board', 'Embossed Logo with Custom Die-Cut Inner Tray', 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
                     <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Packaging Box">
                     <span class="gallery-badge">Packaging</span>
@@ -389,13 +459,13 @@
                     <p>Precision die-cut product box designed for retail visibility and product security.</p>
                     <div class="gallery-meta">
                         <span><i class="fa-solid fa-box"></i> Custom Die-Cut</span>
-                        <span>View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Item 3 -->
-            <div class="gallery-card" data-category="branding" data-title="led acrylic signboard venue outdoor" onclick="openModal('3D LED Acrylic Board', 'Signage & Branding', 'Heavy-Duty ACP Board with Waterproof Samsung LEDs', 'Laser Cut Acrylic Lettering with High-Glow Finish', 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80')">
+            <!-- Item 3 -->
+            <div class="gallery-card" data-category="branding" data-title="3d led acrylic signboard outdoor venue" onclick="openModal('3D LED Acrylic Board', 'Signage & Branding', 'Heavy-Duty ACP Board with Waterproof Samsung LEDs', 'Laser Cut Acrylic Lettering with High-Glow Finish', 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
                     <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Signboard">
                     <span class="gallery-badge">Outdoor Media</span>
@@ -405,13 +475,13 @@
                     <p>Weather-resistant storefront branding built for long-distance night visibility.</p>
                     <div class="gallery-meta">
                         <span><i class="fa-solid fa-lightbulb"></i> LED Illuminated</span>
-                        <span>View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Item 4 -->
-            <div class="gallery-card" data-category="print" data-title="brochure flyer marketing corporate" onclick="openModal('Tri-Fold Marketing Brochure', 'Commercial Printing', '220 GSM Gloss Art Paper', 'Double-Sided Offset Print with Aqueous Coating', 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80')">
+            <!-- Item 4 -->
+            <div class="gallery-card" data-category="print" data-title="brochure flyer marketing corporate trifold" onclick="openModal('Tri-Fold Marketing Brochure', 'Commercial Press', '220 GSM Gloss Art Paper', 'Double-Sided Offset Print with Aqueous Coating', 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
                     <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80" alt="Brochure Print">
                     <span class="gallery-badge">Commercial Press</span>
@@ -421,7 +491,71 @@
                     <p>Vibrant color reproduction for corporate promotional events and product launches.</p>
                     <div class="gallery-meta">
                         <span><i class="fa-solid fa-copy"></i> Tri-Fold Finish</span>
-                        <span>View Details <i class="fa-solid fa-arrow-right"></i></span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="gallery-card" data-category="packaging" data-title="rigid luxury gift box packaging custom" onclick="openModal('Rigid Corporate Gift Box', 'Packaging', '1200 GSM Kappa Board wrapped with Textured Paper', 'Silver Foil Stamping & Magnetic Snap Closure', 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80')">
+                <div class="gallery-img-container">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Gift Box">
+                    <span class="gallery-badge">Packaging</span>
+                </div>
+                <div class="gallery-card-body">
+                    <h4>Rigid Corporate Gift Set</h4>
+                    <p>Bespoke magnetic gift boxes built for high-end corporate hampers and VIP merchandise.</p>
+                    <div class="gallery-meta">
+                        <span><i class="fa-solid fa-gift"></i> Magnetic Closure</span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="gallery-card" data-category="branding" data-title="flex banner exhibition backdrop display" onclick="openModal('Outdoor Event Flex Backdrop', 'Signage & Branding', '440 GSM Heavy Star Flex Material', 'Solvent Ink Weatherproof High-Density Output', 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80')">
+                <div class="gallery-img-container">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Event Banner">
+                    <span class="gallery-badge">Outdoor Media</span>
+                </div>
+                <div class="gallery-card-body">
+                    <h4>Exhibition Flex Backdrop</h4>
+                    <p>Large format display banners engineered for trade shows, expos, and stage setups.</p>
+                    <div class="gallery-meta">
+                        <span><i class="fa-solid fa-expand"></i> Large Format</span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="gallery-card" data-category="marketing" data-title="social media branding campaign graphics" onclick="openModal('Digital Branding & Campaign Assets', 'Digital Marketing', 'Digital High-Resolution Graphics (PNG/SVG/MP4)', 'Omni-channel Social Media & Ad Strategy', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80')">
+                <div class="gallery-img-container">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Digital Campaign">
+                    <span class="gallery-badge">Digital Marketing</span>
+                </div>
+                <div class="gallery-card-body">
+                    <h4>Social Media Brand Strategy</h4>
+                    <p>Comprehensive online visual branding, promotional video ads, and SEO optimization.</p>
+                    <div class="gallery-meta">
+                        <span><i class="fa-solid fa-chart-pie"></i> Digital Campaign</span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="gallery-card" data-category="print" data-title="stationery business card letterhead envelope" onclick="openModal('Executive Corporate Stationery', 'Commercial Press', '350 GSM Cotton Textured Stock & 120 GSM Envelopes', 'Blind Embossing with Metallic Edge Gilding', 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80')">
+                <div class="gallery-img-container">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Corporate Stationery">
+                    <span class="gallery-badge">Commercial Press</span>
+                </div>
+                <div class="gallery-card-body">
+                    <h4>Executive Stationery Suite</h4>
+                    <p>Premium business cards, letterheads, customized envelopes, and presentation folders.</p>
+                    <div class="gallery-meta">
+                        <span><i class="fa-solid fa-id-card"></i> Textured Finish</span>
+                        <span>View Specs <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
@@ -440,7 +574,7 @@
                     <p style="margin-bottom: 0.5rem;"><strong>Paper Stock:</strong> <span id="m-stock" style="color: var(--gray);">GSM</span></p>
                     <p><strong>Special Finishing:</strong> <span id="m-finish" style="color: var(--gray);">Finishing</span></p>
                 </div>
-                <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 1.5rem;">This project was produced in-house at our Kathmandu facility using high-precision offset and pre-press technology.</p>
+                <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 1.5rem;">Produced in-house at our Anamnagar, Kathmandu facility using precision CTP offset plates and digital presses.</p>
                 <a href="#contact" onclick="closeModal()" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Request Similar Job Quote</a>
             </div>
         </div>
