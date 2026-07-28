@@ -43,7 +43,7 @@
 
         /* Hero Section */
         .hero { padding: 10rem 2rem 6rem; background: radial-gradient(circle at 80% 20%, #1e3a8a 0%, #0f172a 70%); color: var(--white); text-align: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1800&q=80') center/cover; opacity: 0.08; pointer-events: none; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1562564018-723a61c8dbe3?auto=format&fit=crop&w=1800&q=80') center/cover; opacity: 0.08; pointer-events: none; }
         .hero-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
         
         .badge { background: rgba(96, 165, 250, 0.15); color: var(--accent-light); padding: 0.5rem 1.4rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(96, 165, 250, 0.3); }
@@ -74,11 +74,7 @@
         .highlight-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
         .highlight-item p { font-size: 0.85rem; color: var(--gray); margin: 0; }
 
-        .about-image-stack { position: relative; }
         .about-image-stack img { width: 100%; height: 420px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-lg); }
-        .about-experience-badge { position: absolute; bottom: -20px; left: -20px; background: var(--primary); color: var(--white); padding: 1.5rem 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4); text-align: center; }
-        .about-experience-badge .num { font-size: 2.2rem; font-weight: 800; line-height: 1; }
-        .about-experience-badge .txt { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
 
         /* Services Grid & Interactive Cards */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
@@ -120,7 +116,7 @@
         .workflow-text ul { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
         .workflow-text ul li { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem; color: var(--dark); }
         .workflow-text ul li i { color: var(--emerald); font-size: 1.1rem; }
-        .workflow-img img { width: 100%; height: 320px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg); }
+        .workflow-img img { width: 100%; height: 320px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg); display: block; }
 
         /* Dynamic Work Gallery Section */
         .gallery-controls { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
@@ -250,11 +246,7 @@
             </div>
 
             <div class="about-image-stack">
-                <img src="https://images.unsplash.com/photo-1542744094-3a3172720177?auto=format&fit=crop&w=800&q=80" alt="Swabhiman Press Operations">
-                <div class="about-experience-badge">
-                    <div class="num">100%</div>
-                    <div class="txt">Client Commitment</div>
-                </div>
+                <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80" alt="Swabhiman Press Operations">
             </div>
         </div>
     </section>
@@ -273,7 +265,7 @@
                     <div class="service-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
                     <h3>Commercial & Book Printing</h3>
                     <p>High-volume magazine, textbook, annual report, and journal printing using multi-color offset presses.</p>
-                    <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Book Printing">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Book Printing">
                     <div class="tag-list">
                         <span class="tag">80-350 GSM</span>
                         <span class="tag">Perfect Binding</span>
@@ -296,7 +288,7 @@
                     <div class="service-icon-wrapper"><i class="fa-solid fa-box-open"></i></div>
                     <h3>Custom Product Packaging</h3>
                     <p>Die-cut product packaging, rigid luxury boxes, food-grade cartons, and pharmaceutical sleeves.</p>
-                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Packaging Box">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Packaging Box">
                     <div class="tag-list">
                         <span class="tag">Duplex Board</span>
                         <span class="tag">Spot UV</span>
@@ -342,7 +334,7 @@
                     <div class="service-icon-wrapper"><i class="fa-solid fa-store"></i></div>
                     <h3>Outdoor Media & Signage</h3>
                     <p>Large format flex printing, 3D LED acrylic signboards, display banners, and exhibition stalls.</p>
-                    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Outdoor Signage">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Outdoor Signage">
                     <div class="tag-list">
                         <span class="tag">3D LED Boards</span>
                         <span class="tag">Eco-Solvent</span>
@@ -404,7 +396,7 @@
                     </ul>
                 </div>
                 <div class="workflow-img">
-                    <img id="wf-image" src="https://images.unsplash.com/photo-1542744094-3a3172720177?auto=format&fit=crop&w=800&q=80" alt="Workflow Step">
+                    <img id="wf-image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Requirement & Strategy Consultation">
                 </div>
             </div>
         </div>
@@ -433,9 +425,9 @@
 
         <div class="gallery-grid" id="galleryGrid">
             <!-- Item 1 -->
-            <div class="gallery-card" data-category="print" data-title="annual report corporate catalog journal" onclick="openModal('Annual Corporate Journal', 'Commercial Press', '300 GSM Art Card Cover, 120 GSM Matt Inner Pages', 'Perfect Lock Binding with Spot UV Logo', 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=800&q=80')">
+            <div class="gallery-card" data-category="print" data-title="annual report corporate catalog journal" onclick="openModal('Annual Corporate Journal', 'Commercial Press', '300 GSM Art Card Cover, 120 GSM Matt Inner Pages', 'Perfect Lock Binding with Spot UV Logo', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
-                    <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=600&q=80" alt="Catalog Print">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Catalog Print">
                     <span class="gallery-badge">Commercial Press</span>
                 </div>
                 <div class="gallery-card-body">
@@ -449,9 +441,9 @@
             </div>
 
             <!-- Item 2 -->
-            <div class="gallery-card" data-category="packaging" data-title="custom duplex product packaging box cosmetic" onclick="openModal('Luxury Cosmetic Packaging Box', 'Packaging', '350 GSM Swedish Duplex Board', 'Embossed Logo with Custom Die-Cut Inner Tray', 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80')">
+            <div class="gallery-card" data-category="packaging" data-title="custom duplex product packaging box cosmetic" onclick="openModal('Luxury Cosmetic Packaging Box', 'Packaging', '350 GSM Swedish Duplex Board', 'Embossed Logo with Custom Die-Cut Inner Tray', 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
-                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Packaging Box">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Packaging Box">
                     <span class="gallery-badge">Packaging</span>
                 </div>
                 <div class="gallery-card-body">
@@ -465,9 +457,9 @@
             </div>
 
             <!-- Item 3 -->
-            <div class="gallery-card" data-category="branding" data-title="3d led acrylic signboard outdoor venue" onclick="openModal('3D LED Acrylic Board', 'Signage & Branding', 'Heavy-Duty ACP Board with Waterproof Samsung LEDs', 'Laser Cut Acrylic Lettering with High-Glow Finish', 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80')">
+            <div class="gallery-card" data-category="branding" data-title="3d led acrylic signboard outdoor venue" onclick="openModal('3D LED Acrylic Board', 'Signage & Branding', 'Heavy-Duty ACP Board with Waterproof Samsung LEDs', 'Laser Cut Acrylic Lettering with High-Glow Finish', 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
-                    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Signboard">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Signboard">
                     <span class="gallery-badge">Outdoor Media</span>
                 </div>
                 <div class="gallery-card-body">
@@ -481,9 +473,9 @@
             </div>
 
             <!-- Item 4 -->
-            <div class="gallery-card" data-category="print" data-title="brochure flyer marketing corporate trifold" onclick="openModal('Tri-Fold Marketing Brochure', 'Commercial Press', '220 GSM Gloss Art Paper', 'Double-Sided Offset Print with Aqueous Coating', 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80')">
+            <div class="gallery-card" data-category="print" data-title="brochure flyer marketing corporate trifold" onclick="openModal('Tri-Fold Marketing Brochure', 'Commercial Press', '220 GSM Gloss Art Paper', 'Double-Sided Offset Print with Aqueous Coating', 'https://images.unsplash.com/photo-1562564018-723a61c8dbe3?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
-                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80" alt="Brochure Print">
+                    <img src="https://images.unsplash.com/photo-1562564018-723a61c8dbe3?auto=format&fit=crop&w=600&q=80" alt="Brochure Print">
                     <span class="gallery-badge">Commercial Press</span>
                 </div>
                 <div class="gallery-card-body">
@@ -497,9 +489,9 @@
             </div>
 
             <!-- Item 5 -->
-            <div class="gallery-card" data-category="packaging" data-title="rigid luxury gift box packaging custom" onclick="openModal('Rigid Corporate Gift Box', 'Packaging', '1200 GSM Kappa Board wrapped with Textured Paper', 'Silver Foil Stamping & Magnetic Snap Closure', 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80')">
+            <div class="gallery-card" data-category="packaging" data-title="rigid luxury gift box packaging custom" onclick="openModal('Rigid Corporate Gift Box', 'Packaging', '1200 GSM Kappa Board wrapped with Textured Paper', 'Silver Foil Stamping & Magnetic Snap Closure', 'https://images.unsplash.com/photo-1513885045260-6b3086b24c17?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
-                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Gift Box">
+                    <img src="https://images.unsplash.com/photo-1513885045260-6b3086b24c17?auto=format&fit=crop&w=600&q=80" alt="Gift Box">
                     <span class="gallery-badge">Packaging</span>
                 </div>
                 <div class="gallery-card-body">
@@ -545,9 +537,9 @@
             </div>
 
             <!-- Item 8 -->
-            <div class="gallery-card" data-category="print" data-title="stationery business card letterhead envelope" onclick="openModal('Executive Corporate Stationery', 'Commercial Press', '350 GSM Cotton Textured Stock & 120 GSM Envelopes', 'Blind Embossing with Metallic Edge Gilding', 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80')">
+            <div class="gallery-card" data-category="print" data-title="stationery business card letterhead envelope" onclick="openModal('Executive Corporate Stationery', 'Commercial Press', '350 GSM Cotton Textured Stock & 120 GSM Envelopes', 'Blind Embossing with Metallic Edge Gilding', 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80')">
                 <div class="gallery-img-container">
-                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="Corporate Stationery">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Corporate Stationery">
                     <span class="gallery-badge">Commercial Press</span>
                 </div>
                 <div class="gallery-card-body">
@@ -656,7 +648,7 @@
                 title: '<i class="fa-solid fa-comments text-primary"></i> 1. Requirement & Strategy',
                 desc: 'We analyze your requirements, target audience, quantity needs, paper stock GSM, and packaging box dimensions to curate a cost-effective estimate.',
                 list: ['Free sample paper stock comparison', 'Structural box dimension strategy', 'Cost optimization plan'],
-                img: 'https://images.unsplash.com/photo-1542744094-3a3172720177?auto=format&fit=crop&w=800&q=80'
+                img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80'
             },
             2: {
                 title: '<i class="fa-solid fa-pen-ruler text-primary"></i> 2. Graphic Design & Prototyping',
@@ -668,19 +660,19 @@
                 title: '<i class="fa-solid fa-sliders text-primary"></i> 3. Pre-Press & CTP Plate Output',
                 desc: 'Computer-to-Plate (CTP) technology transfers artwork onto aluminum plates with micron-level precision to guarantee crisp print reproduction.',
                 list: ['Laser CTP Plate Thermal Imaging', 'Pantone Color Code Matching', 'Paper Stock Pre-Conditioning'],
-                img: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80'
+                img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80'
             },
             4: {
                 title: '<i class="fa-solid fa-print text-primary"></i> 4. High-Speed Offset & Digital Print',
                 desc: 'High-speed multi-color offset and digital presses execute your job with automated color density control and continuous quality monitoring.',
                 list: ['Automated Ink Density Measurement', 'Multi-Color Synchronized Printing', 'Low-Volume & High-Volume Flexibility'],
-                img: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=800&q=80'
+                img: 'https://images.unsplash.com/photo-1562564018-723a61c8dbe3?auto=format&fit=crop&w=800&q=80'
             },
             5: {
                 title: '<i class="fa-solid fa-truck-ramp-box text-primary"></i> 5. Post-Press Finishing & Delivery',
                 desc: 'Precision binding, die-cutting, foil stamping, lamination, and quality inspection before prompt delivery across Nepal.',
                 list: ['Gloss/Matte Lamination & Foil Stamping', 'Perfect Binding & Die-Cut Folding', 'Quality Inspection & Doorstep Delivery'],
-                img: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80'
+                img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
             }
         };
 
